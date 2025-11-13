@@ -1,0 +1,120 @@
+Dobrý den Jmenuji se Jan Vondrouš a rád bych se zde pokusil obhájit svou diplomovou práci, jejíž název je Renovace MVC frameworků.
+
+XX
+
+Nyní bych vám rád představil osnovu mé obhajoby, která zhruba odpovída i obsahu mé závěrečné práce.
+
+OSNOVA
+Stručné přestavení Architektury MVC a MVC frameworků
+
+Proč je v současné době vhodné zabývat se modernizací MVC frameworků.
+
+Dále představení základních způsobů kterými lze modernizaci provést.
+
+A následně popis toho jak se práce věnuje modernizace frameworku Struts 1 na framework Struts 2 a případové studii konkrétního převodu.
+
+Ko konci jaké vidím hlavní přínosy mé práce
+
+A na závěr Zodpovězení dotazů a připomínek
+
+
+XX
+
+Nejprve začnu představení toho, co je to vlastně MVC.
+Je to architekrua, jejímž použitím rozdělíme aplikaci do tří základních vrstev.
+
+Jednak je to vrstva Model, která zajišťuje samotnou funkčnost aplikace, ukládání načítání dat.
+Potom vrstva Pohledu, která zajištuje komunikaci s uživatelem, což typicky obnáší načítaní a zobrazování dat uživateli.
+A poslední vrstvou je řadič, který zajišťuje komunikaci mezi předešlími dvěma vrstvami
+
+Typicky pak může komunikace těchto vrstev vypadat následovně:
+Uživatel ve vrstvě pohledu vyplní a odešle nějaký formulář.
+Řadič potom zajistí aktualizaci dat ve vrstvě modelu a podle výsledku této akce potom rozhodne jaký další pohled se uživateli zobrazí.
+
+XX
+
+Tato Architektura se začala často používat a brzy začali vznikat takzvané MVC frameworky. Ty představují již jakousi částečně hotovou aplikaci a usnadnují implementaci MVC architektury.
+Navíc MVC frameworky typicky nabízí další funkce, které usnadní vývoj aplikace, jako například validaci vstupních polí, nebo zjednodušené zobrazování chybových hlášení.
+
+To co je podstatné je, že. Použitím MVC frameworku se zjednoduší a zrychlí vývoj a správa webové aplikace.
+
+Tím se dostáváme k tomu
+Proč je vhodné zabývat modernizací MVC frameworků?
+
+Díky zmiňovaným výhodám se MVC frameworky začaly hojně používat a jsou dnes prakticky standardní součástí webových aplikací.
+
+Spolu stím prošly MVC frameworky  svým vývojem a vznikly nové frameworky, které vývoj aplikací ještě více zjednodušují
+
+Proto může být u některých stávajících aplikací vhodné zamyslet se nad tím, zda se nevyplatí převést je na nový framework a usnadnit tak jejich další rozšiřování a správu.
+
+XX
+
+Dále jsem se v práci zabýval tím jakým způsobem lze provést modernizaci MVC frameworku. To jsem rozdělil do čtyř základních možností, které zde ve stručnosti uvedu.
+
+První možnost je: Ponechat stávající framework a žádnou změnu frameworku neprovádět.
+To bude u většiny aplikací pravděpodobně nejlepší řešení. Pokud aplikace funguje víceméně bez problémů a nebudou se vní provádět nějaké opravdu velké změny, pak se přechod na nový framework rozhodně nevyplatí.
+Přepsat aplikaci do nového frameworku vyžaduje v každém případě poměrně značné usilí.
+Je sice pravda, že novější frameworky jsou lepší ale ve většině případů to nevyváží práci, která by byla spojená s provedením modernizace.
+
+Druhá možnost je ponechat v aplikaci starý framework, ale zároveň do ní přidat i nový framework. Tím bude možné nové funkce aplikace programovat pomocí nového frameworku a přitom se vyhneme nutnosti přepisovat stávající část aplikace.
+Toto řešnení může být vhodné, pokud se mají výrazně rozšiřovat funkce, které aplikace nabízí a přitom se z nějakého důvodu nevyplatí přepisovat stávající část této aplikace. Velkou nevýhodou je, že se tím rozdělí aplikace na dvě samostatné části. A navíc je nutné provozovat v aplikaci současně dva frameworky najednou.
+
+Tyto problémy odstraňuje třetí možnost, která je stejná jako předešlé řešení, ale stím rozdílem, že se celá aplikace postupně přepíše do nového frameworku. Tím lze ihned přidávat nové funkce do aplikace pomocí nového frameworku a část aplikace se starým frameworkem postupně dle potřeby přepisovat do nového frameworku.
+
+Poslední možností je aplikace celou znovu vytvořit v novém frameworku.
+To se vyplatí pokud je aplikace špatně navržena, nebo napsána nečistým způsobem. Popřípadě pokud je starý a nový framework příliš odlišný.
+
+Dale pak v práci zmiňuji některé problémy, které při modernizaci mohou nastat.
+
+XX
+
+Další část čtenáře velmi stručně seznamuje s nejběžnějšími javovými MVC frameworky. Konkrétně  Struts 1, Struts 2, Java Server Faces, Tapestry, Spring MVC a Stripes
+
+XX
+
+O poznání podrobně se v práci věnuji tomu, jak lze převést aplikaci z frameworku Struts 1 na Struts 2. 
+
+Tady bych poznamenal, že Struts 1 a 2 si nejsou tak podobné, jak by se mohlo na podle názvu zdát, protože Struts 2 vpodstatě odpovídá frameworku WebWork, který byl vyvíjen nezávisle na Struts 1.
+
+Popisuji zde, 
+Hlavní rozdíly mezi Struts 1 a Struts 2.
+
+Jak přidat framework Struts 2 do aplikace, která již obsahuje framework Struts 1 a jak provést jeho základní nastavení.
+
+Jak převést konfigurační soubor frameworku Struts 1 do Struts 2.
+
+Jak převádět javové třídy představující Akce.
+
+Jak převádět JSP stránky.
+
+Dále pak jak funguje Validace vstupních dat a lokalizace ve frameworku Struts 1 a Struts 2.
+
+Další odstavec Přepsat!!!!!!!!!!
+A jak ve Struts 2 použít Struts 1 plugin, který umožňuje používat akce a validaci napsanou ve frameworku Struts 1 v aplikaci používající framework Struts 2.
+
+XX
+
+Poslední část práce je pak věnována případové studii, kde je převod realizován na aplikaci Kalkulátor energetické náročnosti technologií pro čištění kontaminovaných medií.
+
+XX
+
+Pokud bych měl sám zhodnotit, čím je moje práce přínosná, pak bych zmínil především dva hlavní přínosy.
+Jednak čtenáři pomůže rozhodnout, zda a popřípadě jakým způsobem provést modernizaci frameworku. A to tím, že jsou zde jednak schrnuty možnosti jakými lze modernizaci provést a jednak tím, že je zde zmíněno mnoho různých důvodů, které mohou být při rozhodování důležité.
+
+Dále by pak tato práce měla velmi usnadnit práci tomu, kdo se chystá převádět nějakou existující aplikaci z frameworku Struts 1 do frameworku Struts 2. A to díky porovnání těchto frameworků. Popsáním převodu jednotlivých částí těchto frameworků a v neposlední řadě díky případové studii, v které je popsán převod konkrétní aplikace.
+
+XX
+
+Nyní bych již rád reagoval na dotazy a připomínky, které jsem nalezl v posudcích.
+
+Nejprve tedy dotaz: Zda bylo nutné pro modernizaci aplikace zasahovat do objektového modelu?
+To musím říct, že v podstatě ne, až na několik tříd, které reprezentovali akce a všechny třídy, které reprezentovali ActionFormy frameworku Struts 1. A potom jsem implementaci všech tříd, které používali něco z frameworku Struts 1. Například ve frameworku Struts 1 je třída ActionErrors, do které se ukládají chyby vzniklé při nějaké akci. Tato třída byla předávána hluboko dovnitř aplikace a musel jsem tam měnit implementaci tříd, které neměli s prezenční vrstvou nic společného. To se ale na objektovém modelu změnilo pouze změnou parametrů některých metod.
+
+Nyní bych rád vysvětlil proč jsem používal slovo framework a ne rámec.
+Poměrně dlouho jsem přemýšlel zda mám v textu používat slovo framework, nebo rámec. Hledal jsem po internetu co se používá častěji a zjistil jsem, že to je zhruba půl na půl. Nakonec jsem vyšel ze zadání a používal jsem slovo framework.
+
+A poslední připomínka se týká toho, že nejsou v textu vyznačena klíčová slova a identifikátory. Ktomu můžu říct snad jen to, že je to dobrý nápad a že by to opravdu bylo lepší.
+
+XX
+
+a teď už bych nechal prostor pro Vaše případné dotazy.

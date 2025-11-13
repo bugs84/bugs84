@@ -1,0 +1,128 @@
+body {
+  margin:0;
+  padding:0;
+  color: #000;
+  background-color : #fff;
+  background-image:url('images/bg.jpg');
+  background-repeat: repeat-y;
+}
+
+#pagebody {
+  width: 750px;
+  padding: 0px 0px 0px 0px;
+  position: relative;
+  top: 225px;
+  left: 50%;
+  margin: 20px 0 245px -375px;
+  color: #000;
+  background-color: transparent;
+}
+
+#logo1 {
+  width:380px;
+  height:47px;
+  position:absolute;
+  top:0px;
+  left:0px;
+  overflow:hidden;
+  color: #000;
+  background-color: #fff;
+  background-image:url('images/logo1.jpg');
+  background-repeat: no-repeat;
+}
+
+#logo2 {
+  width:380px;
+  height:156px;
+  position:absolute;
+  top:47px;
+  left:0px;
+  overflow:hidden;
+  color: #000;
+  background-color: #fff;
+  background-image:url('images/logo2.jpg');
+  background-repeat: no-repeat;
+}
+
+#logo3 {
+  width:322px;
+  height:156px;
+  position:absolute;
+  top:47px;
+  left:380px;
+  overflow:visible;
+  color: #000;
+  background-color: #fff;
+  background-image:url('images/logo3.jpg');
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#logo4 {
+  width:380px;
+  height:62px;
+  position:absolute;
+  top:203px;
+  left:0px;
+  overflow:hidden;
+  color: #000;
+  background-color: #fff;
+  background-image:url('images/logo4.jpg');
+  background-repeat: no-repeat;
+}
+
+#text {
+  width:720px;
+  position:relative;
+  padding: 0px 0px 40px 0px;
+  top:0px;
+  left:15px;
+  overflow:hidden;
+  color: #000;
+  background-color:transparent;
+
+}
+
+
+#links {
+  height:25px;
+  text-align:right;
+  position:absolute;
+  bottom:20px;
+  right:20px;
+  overflow:visible;
+  color : #000;
+}
+
+a.menu {
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+a.menu:hover {
+  text-decoration:underline;
+}
+
+#foot {
+  width:750px;
+  height:30px;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  overflow:hidden;
+  color: #000;
+  background-color: transparent;
+}
+
+#footnote {
+  display:block;
+  padding:0px 15px 0px 15px;
+  text-align:center;
+}
+
+.hidden{
+  /*visibility:hidden;*/
+  display:none;
+}
+

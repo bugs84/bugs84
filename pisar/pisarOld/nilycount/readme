@@ -1,0 +1,79 @@
+---------------------------------------------------------------
+1) Adresar nilycount (cely adresar, ne jen jeho obsah) zkopiruj 
+na stejne misto jako mas hlavni stranku
+
+---------------------------------------------------------------
+2) Pomoci nasledujicich prikazu vytvor databazi:
+
+CREATE TABLE `stranky` (
+`stranka` VARCHAR(20) NOT NULL ,
+`pocet` INT UNSIGNED DEFAULT '0' NOT NULL ,
+PRIMARY KEY ( `stranka` ) 
+) COMMENT = 'sledovane stranky';
+
+
+CREATE TABLE `systemy` (
+`os` VARCHAR(20) NOT NULL ,
+`pocet` INT UNSIGNED DEFAULT '0' NOT NULL ,
+PRIMARY KEY ( `os` ) 
+) COMMENT = 'operacni systemy';
+
+
+CREATE TABLE `prohlizece` (
+`prohlizec` VARCHAR(20) NOT NULL ,
+`pocet` INT UNSIGNED DEFAULT '0' NOT NULL ,
+PRIMARY KEY ( `prohlizec` ) 
+) COMMENT = 'pouzite webove prohlizece';
+
+
+CREATE TABLE `proh_os` (
+`prohlizec` VARCHAR(20) NOT NULL ,
+`os` VARCHAR(20) NOT NULL ,
+`pocet` INT UNSIGNED DEFAULT '0' NOT NULL ,
+PRIMARY KEY ( `prohlizec` , `os` ) ,
+INDEX ( `prohlizec` ) ,
+INDEX ( `os` )
+) COMMENT = 'statistika prohlizecu na jednotlivych os';
+
+
+CREATE TABLE `hoste` (
+`host` varchar(30) NOT NULL,
+`pocet` int(10) unsigned NOT NULL default '0',
+`os` varchar(20) NOT NULL,
+`prohlizec` varchar(20) NOT NULL,
+`cas` datetime NOT NULL default '0000-00-00 00:00:00',
+PRIMARY KEY  (`host`)
+)COMMENT='podrobnosti o hostech stranek';
+
+---------------------------------------------------------------
+3) V souboru nilycount/conf/conf.php zadej informace o tvem MySQL
+serveru (adresa,jmeno,databaze,heslo). Lze tam i volit nejake 
+dalsi parametry. Blizsi informace najdes v komentarich primo v 
+tom souboru.
+
+---------------------------------------------------------------
+4) Na kazdou stranku, kterou chces mit zahrnutou ve statistice 
+vloz nasledujici kod:
+
+<?
+define("_NC_NAME", "Nazev_stranky");
+define("_NC_DIR", "cesta_k_pocitadlu");
+define("_NC_COUNTER", _NC_DIR."mark.php");
+if (is_readable(_NC_COUNTER)) include_once(_NC_COUNTER);
+?>
+
+
+
+napriklad:
+
+<?
+define("_NC_NAME", "Hlavni stranka");
+define("_NC_DIR", "./nilycount/");
+define("_NC_COUNTER", _NC_DIR."mark.php");
+if (is_readable(_NC_COUNTER)) include_once(_NC_COUNTER);
+?>
+
+---------------------------------------------------------------
+5) Pokud chces aby lide meli pristup ke statistikam, tak staci
+udelat odkaz na adresar nilycount. (je v nem soubor index, ktery
+vypise vsechny statistiky ve forme HTML stranek)
